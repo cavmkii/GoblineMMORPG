@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gobline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login">
+    <div class="login-box">
+      <h1>Gobline</h1>
+      <p class="sub">a goblin MMO, very early</p>
+      <input id="name" maxlength="16" placeholder="Goblin name" autocomplete="off" />
+      <button id="play">Enter the Warren</button>
+      <p id="login-err"></p>
+      <div class="keys">
+        <b>WASD</b> move · <b>mouse</b> aim · <b>LMB</b> basic attack · <b>Space</b> tumble<br />
+        <b>1-8</b> hotbar · <b>Tab</b> cycle bar · <b>E</b> interact · <b>Q</b> grog<br />
+        <b>C</b> character · <b>I</b> inventory · <b>K</b> skills · <b>B</b> bank · <b>M</b> market · <b>U</b> craft/upgrade · <b>Enter</b> chat
+      </div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="hud" hidden>
+    <div id="topleft"></div>
+    <div id="zone-banner"></div>
+    <canvas id="minimap" width="200" height="150"></canvas>
+    <div id="log"></div>
+    <input id="chat" maxlength="200" placeholder="Say something (Enter)" hidden />
+    <div id="bottom">
+      <div id="channel" hidden><div id="channel-fill"></div><span id="channel-label"></span></div>
+      <div id="bars">
+        <div class="bar hp"><div class="fill"></div><span></span></div>
+        <div class="bar mp"><div class="fill"></div><span></span></div>
+        <div class="bar sp"><div class="fill"></div><span></span></div>
+      </div>
+      <div id="hotbar-wrap">
+        <div id="hotbar-label"></div>
+        <div id="hotbar"></div>
+      </div>
+      <div id="buffs"></div>
+    </div>
+    <div id="death" hidden>You died. <span id="respawn"></span></div>
+    <div id="panel" hidden>
+      <div id="panel-head"><span id="panel-title"></span><button id="panel-close">✕</button></div>
+      <div id="panel-body"></div>
+    </div>
+    <div id="tooltip" hidden></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
