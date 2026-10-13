@@ -1,0 +1,14 @@
+{
+  "name": "goblin-mmorpg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Goblin MMORPG prototype: authoritative Node server + browser client",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
